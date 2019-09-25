@@ -20,3 +20,19 @@ ctx.lineWidth = 10;
 
 ctx.fillRect(10, 10, 100, 100);
 ctx.strokeRect(10, 10, 100, 100);
+
+function drawRectangle(ctx, x, y) {
+  // these rectangles will be 50x50px squares
+  var size = 50;
+
+  ctx.fillStyle = 'purple';
+  ctx.stokeStyle = 'yellow';
+  ctx.lineWidth = 5;
+
+  ctx.fillRect(x, y, size, size);
+  ctx.strokeRect(x, y, size, size);
+}
+
+game.addEventListener("click", function(event) {
+  drawRectangle(ctx, event.offsetX, event.offsetY);
+});
